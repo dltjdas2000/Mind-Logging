@@ -2,7 +2,7 @@
 ![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)   
 ## 💡 목차
 
-1. [🙌 Mind Logging 이란?   ]([#-Mind-Logging-이란?](https://github.com/dltjdas2000/Mind-Logging?tab=readme-ov-file#-mind-logging-%EC%9D%B4%EB%9E%80))
+1. [🙌 Mind Logging 이란?   ](#-Mind-Logging-이란?)
 2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요!)
 3. [😎 팀원소개](#-팀원-소개)
     - [🤓이성민 - 환경에너지공간융합학과](#header) 
