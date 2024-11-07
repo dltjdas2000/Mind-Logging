@@ -2,8 +2,8 @@
 ![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)   
 ## 💡 목차
 
-1. [🙌 Mind Logging 이란?   ](#-Mind-Logging-이란?)
-2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요!)
+1. [🙌 Mind Logging 이란?   ](#-mind-logging-이란)
+2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요)
 3. [😎 팀원소개](#-팀원-소개)
     - [🤓이성민 - 환경에너지공간융합학과](#header) 
     - [😪권혜진 - 데이터사이언스학과](#header) 
