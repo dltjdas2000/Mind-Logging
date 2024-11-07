@@ -2,14 +2,14 @@
 ![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)   
 ## 💡 목차
 
-1. [🙌 Mind Logging 이란?   ](#-Mind-Logging-이란?)
+1. [🙌 Mind Logging 이란?   ](#-Mind-Logging-이란?)
 2. [🙋‍♀️ 좀 더 구체적으로 가르쳐주세요!](#-좀-더-구체적으로-가르쳐주세요!)
 3. [😎 팀원소개](#-팀원-소개)
     - [🤓이성민 - 환경에너지 공학과](#header) 
     - [😪권혜진 - 데이터사이언스학과](#header) 
     - [🫥김현수 - 데이터사이언스학과](#header) 
 
-## 🙌 Mind Logging 이란?  
+## 🙌 Mind Logging 이란?  
 - **Mind Logging**은 **AI**를 이용해 일기 작성과 스트레스 관리에 도움을 제공합니다. 
 - 사용자가 자신의 감정을 성찰하고 스트레스를 줄이며 일기 쓰기를 습관화할 수 있도록 돕는 것을 목표로 합니다
 - 현재의 일기 앱들이 갖는 한계를 보완하고자 AI 기반 도구를 통합하여, 사용자에게 글쓰기와 스트레스 관리에서 새로운 경험을 제공합니다.
