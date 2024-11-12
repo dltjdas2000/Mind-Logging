@@ -2,7 +2,7 @@
 ![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)   
 ## 💡 목차
 
-1. [🙌 Mind Logging 이란?](#-mind-logging-이란?)
+1. [🙌 Mind Logging 이란?](#-mind-logging-이란)
 2. [🙋‍♀️ Mind Logging 특징](#-mind-logging-특징)
 3. [😎 팀원소개](#팀원-소개)
     - 🤓이성민 - 환경에너지공간융합학과
