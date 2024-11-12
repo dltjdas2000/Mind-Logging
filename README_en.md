@@ -4,7 +4,7 @@
 
 1. [🙌 What is mind logging?](#-what-is-mind-logging)
 2. [🙋 Mind Loggingq Features](#-mind-loggingq-features)
-3. [😎 Introduce team members](##introduce-team-members)
+3. [😎 Introduce team members](#introduce-team-members)
     - 🤓 Lee Seongmin - Department of Environmental Energy Space Convergence
     - 😪 Kwon Hyejin - Department of Data Science
     - 🫥Kim Hyunsoo - Department of Data Science
