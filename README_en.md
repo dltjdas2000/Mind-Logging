@@ -1,4 +1,4 @@
-## 📓 Mind Log 📓
+## 📓 Mind Logging 📓
 ![title](mind_logging_no_grid-removebg-preview.png)
 ## 💡 Table of Contents
 
