@@ -1,5 +1,5 @@
 ## 📓 Mind Log 📓
-![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)
+![title](mind_logging_no_grid-removebg-preview.png)
 ## 💡 Table of Contents
 
 1. [🙌 What is mind logging?](#-what-is-mind-logging)
@@ -7,7 +7,7 @@
 3. [😎 Introduce team members](#introduce-team-members)
     - 🤓 Lee Seongmin - Department of Environmental Energy Space Convergence
     - 😪 Kwon Hyejin - Department of Data Science
-    - 🫥Kim Hyunsoo - Department of Data Science
+    - 🥳 Kim Hyunsu - Department of Data Science
 
 ## 🙌 What is Mind logging?
 - **Mind Logging** uses **AI** to help keep a diary and manage stress.
@@ -32,7 +32,7 @@
 ## Introduce team members
 - 🤓 Lee Sungmin (Leader) -
 Oversee the project, manage progress, and direct the team's goals and outcomes.
-- 🫥Kim Hyun-soo (document author) -
+- 🥳 Kim Hyun-su (document author) -
 Organize websites, create and organize project documents.
 - 😪 Kwon Hye-jin (code developer) -
 Develop core functions of natural language processing and implement stressor analysis functions.
