@@ -1,5 +1,5 @@
 ## 📓 Mind Logging 📓
-![title](https://github.com/dltjdas2000/Mind-Logging/blob/main/logoImage.jpg)   
+![title](mind_logging_no_grid-removebg-preview.png)   
 ## 💡 목차
 
 1. [🙌 Mind Logging 이란?](#-mind-logging-이란)
