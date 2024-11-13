@@ -4,7 +4,7 @@ Thank you for considering contributing to Mind Logging ! We welcome all kinds of
 
 ## Table of Contents     
 
-1. [🛠 Table of Contents](#-Table of Contents)
+1. [🛠 Table of Contents](#Table of Contents)
     - [How to Contribute](#how-to-contribute)
     - [Branching Strategy](#branching-strategy)
     - [Coding Standards](#coding-standards)
