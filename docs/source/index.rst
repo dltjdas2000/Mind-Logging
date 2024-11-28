@@ -15,6 +15,13 @@ Welcome to Mind-Logging's documentation!
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+* :ref:`About_the_Project`
+* :ref:`Getting_Started`
+* :ref:`How_to_Use`
+* :ref:`Technical_Overview`
+* :ref:`API_Reference`
+* :ref:`Configuration_Guide`
+* :ref:`Maintenance_and_Troubleshooting`
+* :ref:`Contribution_Guidelines`
+* :ref:`FAQ`
+* :ref:`Release_Notes`
