@@ -10,6 +10,17 @@ Welcome to Mind-Logging's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   About_the_Project
+   Getting_Started
+   How_to_Use
+   Technical_Overview
+   API_Reference
+   Configuration_Guide
+   Maintenance_and_Troubleshooting
+   Contribution_Guidelines
+   FAQ
+   Release_Notes
+
 
 
 Indices and tables
@@ -18,7 +29,7 @@ Indices and tables
 * :ref:`About_the_Project`
 * :ref:`Getting_Started`
 * :ref:`How_to_Use`
-* :ref:`Technical_Overview`
+* :ref:`Technical_Overview` 
 * :ref:`API_Reference`
 * :ref:`Configuration_Guide`
 * :ref:`Maintenance_and_Troubleshooting`
