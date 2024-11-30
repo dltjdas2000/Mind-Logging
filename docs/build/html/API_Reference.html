@@ -59,43 +59,37 @@
             
   <section id="api-reference">
 <span id="id1"></span><h1>API Reference<a class="headerlink" href="#api-reference" title="Link to this heading">¶</a></h1>
-<p><strong>API 참조</strong>: 사용 가능한 API, 엔드포인트, 요청/응답 형식 및 사용 예제 설명.
-이 섹션은 Mind Logging API에 대한 기본 정보를 제공하며, 사용자가 API를 활용할 수 있도록 돕습니다.</p>
-<p>### Basic Information</p>
-<p>The Mind Logging API follows a RESTful architecture and uses JSON format for data. All requests are securely transmitted over HTTPS.</p>
-<p>### Endpoints</p>
+<p>Detail available APIs, including endpoints, request/response formats, and usage examples.
+사용 가능한 API, 엔드포인트, 요청/응답 형식 및 사용 예제를 설명합니다.
+이 섹션은 Mind Logging API에 대한 기본 정보를 제공하며, 사용자가 API를 효과적으로 활용할 수 있도록 돕습니다.</p>
+<p>—</p>
+<section id="basic-information">
+<h2>Basic Information<a class="headerlink" href="#basic-information" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>The Mind Logging API follows a <strong>RESTful architecture</strong> and uses <strong>JSON format</strong> for data.</p></li>
+<li><p>All requests are securely transmitted over HTTPS.</p></li>
+</ul>
+<p>—</p>
+</section>
+<section id="endpoints">
+<h2>Endpoints<a class="headerlink" href="#endpoints" title="Link to this heading">¶</a></h2>
 <ol class="arabic">
-<li><p><strong>User Registration</strong>
-- <strong>URL</strong>: <cite>/api/register</cite>
-- <strong>Method</strong>: POST
-- <strong>Request Format</strong>:</p>
-<blockquote>
-<div><p><a href="#id2"><span class="problematic" id="id3">``</span></a><a href="#id4"><span class="problematic" id="id5">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”,
-“password”: “your_password”</p>
-</div></blockquote>
-</div></blockquote>
+<li><p><strong>User Registration</strong></p>
 <ul>
-<li><p><strong>Response Format</strong>:
-- Success:</p>
-<blockquote>
-<div><p><a href="#id6"><span class="problematic" id="id7">``</span></a><a href="#id8"><span class="problematic" id="id9">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Registration successful”,
-“userId”: “12345”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>Failure:
-<a href="#id10"><span class="problematic" id="id11">``</span></a><a href="#id12"><span class="problematic" id="id13">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Email already exists”</p>
-</div></blockquote>
+<li><p><strong>URL</strong>: <cite>/api/register</cite></p></li>
+<li><p><strong>Method</strong>: POST</p></li>
+<li><p><strong>Request Format</strong></p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </li>
+<li><p><strong>Response Format</strong>:</p>
+<ul class="simple">
+<li><p><strong>Success</strong></p></li>
+<li><p><strong>Failure</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -103,36 +97,14 @@
 <li><p><strong>Diary Entry Creation</strong>
 - <strong>URL</strong>: <cite>/api/diary</cite>
 - <strong>Method</strong>: POST
-- <strong>Request Format</strong>:</p>
+- <strong>Request Format</strong></p>
 <blockquote>
-<div><p><a href="#id14"><span class="problematic" id="id15">``</span></a><a href="#id16"><span class="problematic" id="id17">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“userId”: “12345”,
-“content”: “Today I felt happy and spent time with friends.”,
-“mood”: “happy”,
-“photos”: [“photo_url_1”, “photo_url_2”]</p>
-</div></blockquote>
-</div></blockquote>
+<div></div></blockquote>
+<ul class="simple">
+<li><p><strong>Response Format</strong></p>
 <ul>
-<li><p><strong>Response Format</strong>:
-- Success:</p>
-<blockquote>
-<div><p><a href="#id18"><span class="problematic" id="id19">``</span></a><a href="#id20"><span class="problematic" id="id21">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Diary entry created”,
-“entryId”: “67890”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>Failure:
-<a href="#id22"><span class="problematic" id="id23">``</span></a><a href="#id24"><span class="problematic" id="id25">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Content cannot be empty”</p>
-</div></blockquote>
-</li>
+<li><p><strong>Success</strong></p></li>
+<li><p><strong>Failure</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -140,84 +112,72 @@
 <li><p><strong>Stress Logging</strong>
 - <strong>URL</strong>: <cite>/api/stress</cite>
 - <strong>Method</strong>: POST
-- <strong>Request Format</strong>:</p>
+- <strong>Request Format</strong></p>
 <blockquote>
-<div><p><a href="#id26"><span class="problematic" id="id27">``</span></a><a href="#id28"><span class="problematic" id="id29">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“userId”: “12345”,
-“stressor”: “studies”,
-“details”: “I am feeling overwhelmed with my assignments.”</p>
-</div></blockquote>
-</div></blockquote>
+<div></div></blockquote>
 <ul>
-<li><p><strong>Response Format</strong>:
-- Success:</p>
+<li><p><strong>Response Format</strong>
+- <strong>Success</strong></p>
 <blockquote>
-<div><p><a href="#id30"><span class="problematic" id="id31">``</span></a><a href="#id32"><span class="problematic" id="id33">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Stress recorded”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>Failure:
-<a href="#id34"><span class="problematic" id="id35">``</span></a><a href="#id36"><span class="problematic" id="id37">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Invalid stressor type”</p>
-</div></blockquote>
-</li>
+<div></div></blockquote>
+<ul class="simple">
+<li><p><strong>Failure</strong></p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<p>### Usage Examples</p>
-<ol class="arabic simple">
-<li><p><strong>User Registration Example</strong>:
-<a href="#id38"><span class="problematic" id="id39">``</span></a><a href="#id40"><span class="problematic" id="id41">`</span></a>bash
-curl -X POST <a class="reference external" href="https://yourapi.com/api/register">https://yourapi.com/api/register</a> -H “Content-Type: application/json” -d ‘{“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”, “password”: “your_password”}’</p></li>
-<li><p><strong>Diary Entry Creation Example</strong>:
-curl -X POST <a class="reference external" href="https://yourapi.com/api/diary">https://yourapi.com/api/diary</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “content”: “Today I felt happy and spent time with friends.”, “mood”: “happy”, “photos”: [“photo_url_1”, “photo_url_2”]}’</p></li>
-<li><p><strong>Stress Logging Example</strong>:
-curl -X POST <a class="reference external" href="https://yourapi.com/api/stress">https://yourapi.com/api/stress</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “stressor”: “studies”, “details”: “I am feeling overwhelmed with my assignments.”}’</p></li>
+<p>—</p>
+</section>
+<section id="usage-examples">
+<h2>Usage Examples<a class="headerlink" href="#usage-examples" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>User Registration Example</strong></p>
+<blockquote>
+<div><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/register">https://yourapi.com/api/register</a> -H “Content-Type: application/json” -d ‘{“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”, “password”: “your_password”}’</p>
+</div></blockquote>
+</li>
+<li><dl class="simple">
+<dt><strong>Diary Entry Creation Example</strong></dt><dd><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/diary">https://yourapi.com/api/diary</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “content”: “Today I felt happy and spent time with friends.”, “mood”: “happy”, “photos”: [“photo_url_1”, “photo_url_2”]}’</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt><strong>Stress Logging Example</strong></dt><dd><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/stress">https://yourapi.com/api/stress</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “stressor”: “studies”, “details”: “I am feeling overwhelmed with my assignments.”}’</p>
+</dd>
+</dl>
+</li>
 </ol>
-<p>### 기본 정보</p>
-<p>Mind Logging API는 RESTful 아키텍처를 따르며, JSON 형식의 데이터를 사용합니다. 모든 요청은 HTTPS를 통해 안전하게 전송됩니다.</p>
-<p>### 엔드포인트</p>
+<p>—</p>
+</section>
+<section id="id2">
+<h2>기본 정보<a class="headerlink" href="#id2" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p>Mind Logging API는 <a href="#id3"><span class="problematic" id="id4">**</span></a>RESTful 아키텍처**를 따르며, <a href="#id5"><span class="problematic" id="id6">**</span></a>JSON 형식**의 데이터를 사용합니다.</p></li>
+<li><p>모든 요청은 HTTPS를 통해 안전하게 전송됩니다.</p></li>
+</ul>
+<p>—</p>
+</section>
+<section id="id7">
+<h2>엔드포인트<a class="headerlink" href="#id7" title="Link to this heading">¶</a></h2>
 <ol class="arabic">
 <li><p><strong>사용자 등록</strong>
 - <strong>URL</strong>: <cite>/api/register</cite>
 - <strong>메서드</strong>: POST
-- <strong>요청 형식</strong>:</p>
+- <strong>요청 형식</strong></p>
 <blockquote>
-<div><p><a href="#id42"><span class="problematic" id="id43">``</span></a><a href="#id44"><span class="problematic" id="id45">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”,
-“password”: “your_password”</p>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;user@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;your_password&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div></blockquote>
-</div></blockquote>
+<ul class="simple">
+<li><p><strong>응답 형식</strong></p>
 <ul>
-<li><p><strong>응답 형식</strong>:
-- 성공:</p>
-<blockquote>
-<div><p><a href="#id46"><span class="problematic" id="id47">``</span></a><a href="#id48"><span class="problematic" id="id49">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Registration successful”,
-“userId”: “12345”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>실패:
-<a href="#id50"><span class="problematic" id="id51">``</span></a><a href="#id52"><span class="problematic" id="id53">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Email already exists”</p>
-</div></blockquote>
-</li>
+<li><p><strong>성공</strong></p></li>
+<li><p><strong>실패</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -225,36 +185,14 @@ curl -X POST <a class="reference external" href="https://yourapi.com/api/stress"
 <li><p><strong>일기 작성</strong>
 - <strong>URL</strong>: <cite>/api/diary</cite>
 - <strong>메서드</strong>: POST
-- <strong>요청 형식</strong>:</p>
+- <strong>요청 형식</strong></p>
 <blockquote>
-<div><p><a href="#id54"><span class="problematic" id="id55">``</span></a><a href="#id56"><span class="problematic" id="id57">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“userId”: “12345”,
-“content”: “Today I felt happy and spent time with friends.”,
-“mood”: “happy”,
-“photos”: [“photo_url_1”, “photo_url_2”]</p>
-</div></blockquote>
-</div></blockquote>
+<div></div></blockquote>
+<ul class="simple">
+<li><p><strong>응답 형식</strong></p>
 <ul>
-<li><p><strong>응답 형식</strong>:
-- 성공:</p>
-<blockquote>
-<div><p><a href="#id58"><span class="problematic" id="id59">``</span></a><a href="#id60"><span class="problematic" id="id61">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Diary entry created”,
-“entryId”: “67890”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>실패:
-<a href="#id62"><span class="problematic" id="id63">``</span></a><a href="#id64"><span class="problematic" id="id65">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Content cannot be empty”</p>
-</div></blockquote>
-</li>
+<li><p><strong>성공</strong></p></li>
+<li><p><strong>실패</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -262,49 +200,48 @@ curl -X POST <a class="reference external" href="https://yourapi.com/api/stress"
 <li><p><strong>스트레스 기록</strong>
 - <strong>URL</strong>: <cite>/api/stress</cite>
 - <strong>메서드</strong>: POST
-- <strong>요청 형식</strong>:</p>
+- <strong>요청 형식</strong></p>
 <blockquote>
-<div><p><a href="#id66"><span class="problematic" id="id67">``</span></a><a href="#id68"><span class="problematic" id="id69">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“userId”: “12345”,
-“stressor”: “studies”,
-“details”: “I am feeling overwhelmed with my assignments.”</p>
+<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;userId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12345&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;stressor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;studies&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I am feeling overwhelmed with my assignments.&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
 </div></blockquote>
-</div></blockquote>
+<ul class="simple">
+<li><p><strong>응답 형식</strong></p>
 <ul>
-<li><p><strong>응답 형식</strong>:
-- 성공:</p>
-<blockquote>
-<div><p><a href="#id70"><span class="problematic" id="id71">``</span></a><a href="#id72"><span class="problematic" id="id73">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“message”: “Stress recorded”</p>
-</div></blockquote>
-</div></blockquote>
-<ul>
-<li><p>실패:
-<a href="#id74"><span class="problematic" id="id75">``</span></a><a href="#id76"><span class="problematic" id="id77">`</span></a>json
-{</p>
-<blockquote>
-<div><p>“error”: “Invalid stressor type”</p>
-</div></blockquote>
-</li>
+<li><p><strong>성공</strong></p></li>
+<li><p><strong>실패</strong></p></li>
 </ul>
 </li>
 </ul>
 </li>
 </ol>
-<p>### 사용 예제</p>
-<ol class="arabic simple">
-<li><p><strong>사용자 등록 예제</strong>:
-<a href="#id78"><span class="problematic" id="id79">``</span></a><a href="#id80"><span class="problematic" id="id81">`</span></a>bash
-curl -X POST <a class="reference external" href="https://yourapi.com/api/register">https://yourapi.com/api/register</a> -H “Content-Type: application/json” -d ‘{“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”, “password”: “your_password”}’</p></li>
-<li><p><strong>일기 작성 예제</strong>:
-curl -X POST <a class="reference external" href="https://yourapi.com/api/diary">https://yourapi.com/api/diary</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “content”: “Today I felt happy and spent time with friends.”, “mood”: “happy”, “photos”: [“photo_url_1”, “photo_url_2”]}’</p></li>
-<li><p><strong>스트레스 기록 예제</strong>:
-curl -X POST <a class="reference external" href="https://yourapi.com/api/stress">https://yourapi.com/api/stress</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “stressor”: “studies”, “details”: “I am feeling overwhelmed with my assignments.”}’</p></li>
+<p>—</p>
+</section>
+<section id="id8">
+<h2>사용 예제<a class="headerlink" href="#id8" title="Link to this heading">¶</a></h2>
+<ol class="arabic">
+<li><p><strong>사용자 등록 예제</strong></p>
+<blockquote>
+<div><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/register">https://yourapi.com/api/register</a> -H “Content-Type: application/json” -d ‘{“email”: “<a class="reference external" href="mailto:user&#37;&#52;&#48;example&#46;com">user<span>&#64;</span>example<span>&#46;</span>com</a>”, “password”: “your_password”}’</p>
+</div></blockquote>
+</li>
+<li><p><strong>일기 작성 예제</strong></p>
+<blockquote>
+<div><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/diary">https://yourapi.com/api/diary</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “content”: “Today I felt happy and spent time with friends.”, “mood”: “happy”, “photos”: [“photo_url_1”, “photo_url_2”]}’</p>
+</div></blockquote>
+</li>
+<li><p><strong>스트레스 기록 예제</strong></p>
+<blockquote>
+<div><p>curl -X POST <a class="reference external" href="https://yourapi.com/api/stress">https://yourapi.com/api/stress</a> -H “Content-Type: application/json” -d ‘{“userId”: “12345”, “stressor”: “studies”, “details”: “I am feeling overwhelmed with my assignments.”}’</p>
+</div></blockquote>
+</li>
 </ol>
+</section>
 </section>
 
 
@@ -313,7 +250,21 @@ curl -X POST <a class="reference external" href="https://yourapi.com/api/stress"
         </div>
       </div>
       <div class="sphinxsidebar" role="navigation" aria-label="Main">
-        <div class="sphinxsidebarwrapper">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="index.html">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">API Reference</a><ul>
+<li><a class="reference internal" href="#basic-information">Basic Information</a></li>
+<li><a class="reference internal" href="#endpoints">Endpoints</a></li>
+<li><a class="reference internal" href="#usage-examples">Usage Examples</a></li>
+<li><a class="reference internal" href="#id2">기본 정보</a></li>
+<li><a class="reference internal" href="#id7">엔드포인트</a></li>
+<li><a class="reference internal" href="#id8">사용 예제</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
