@@ -38,3 +38,8 @@ Organize websites, create and organize project documents.
 Develop core functions of natural language processing and implement stressor analysis functions.
 
 Each member is in a specific role, but it's made up of three team members, all of whom work together as key developers, codewriters, bug fixers, and reviewers to contribute to the success of the project!
+
+
+## Documentation
+You can find detailed documentation at the following link:
+[View on Read the Docs](https://mind-logging.readthedocs.io)
