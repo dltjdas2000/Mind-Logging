@@ -5,7 +5,12 @@ How to Use
 
 **How to Use**: This section provides usage instructions for Mind Logging.
 
+<<<<<<< HEAD
 ### Usage Instructions
+=======
+Usage Instructions
+------------------
+>>>>>>> main
 
 1. **Writing a Diary**:
    - Launch the application and click the "Write Diary" button on the main screen.

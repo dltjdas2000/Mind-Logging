@@ -10,6 +10,7 @@ Welcome to Mind-Logging's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+<<<<<<< HEAD
    About_the_Project
    Getting_Started
    How_to_Use
@@ -21,6 +22,12 @@ Welcome to Mind-Logging's documentation!
    FAQ
    Release_Notes
 
+=======
+.. figure:: ../../mind_logging_no_grid-removebg-preview.png
+   :alt: Mind Logging
+   :width: 300px
+   :align: center
+>>>>>>> main
 
 
 Indices and tables

@@ -20,6 +20,10 @@ Features
    - Action functions that "relieve" recorded stress provide emotional relief, and visual classification allows you to increase your ability to manage stress systematically.
    - It supports emotional recovery and helps relieve psychological stress through the process of facing and relieving stress.
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 ## 🙌 Mind Logging 이란?
 **Mind Logging**은 **AI**를 이용해 일기 작성과 스트레스 관리에 도움을 제공합니다. 
 사용자가 자신의 감정을 인식하고 스트레스를 줄이며 일기 쓰기를 습관화할 수 있도록 돕는 것을 목표로 합니다. 

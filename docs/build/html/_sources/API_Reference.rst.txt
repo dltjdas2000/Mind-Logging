@@ -211,4 +211,7 @@ Mind Logging API는 RESTful 아키텍처를 따르며, JSON 형식의 데이터�
    curl -X POST https://yourapi.com/api/stress \
    -H "Content-Type: application/json" \
    -d '{"userId": "12345", "stressor": "studies", "details": "I am feeling overwhelmed with my assignments."}'
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
