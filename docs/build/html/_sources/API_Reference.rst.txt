@@ -32,18 +32,19 @@ Endpoints
           "password": "your_password"
         }
 
-   - **Response Format**:
+   - **Response Format**
+      - **Success**
 
-     - **Success**
+        .. code-block:: json
 
-       .. code-block:: json
-          {
+            {
             "message": "Registration successful",
             "userId": "12345"
-          }
+            }
      - **Failure**
 
-       .. code-block:: json
+        .. code-block:: json
+
           {
             "error": "Email already exists"
           }
@@ -53,19 +54,21 @@ Endpoints
    - **Method**: POST
    - **Request Format**
 
-     .. code-block:: json
-        {
+        .. code-block:: json
+
+          {
           "userId": "12345",
           "content": "Today I felt happy and spent time with friends.",
           "mood": "happy",
           "photos": ["photo_url_1", "photo_url_2"]
-        }
+          }
 
    - **Response Format**
 
      - **Success**
 
-       .. code-block:: json
+        .. code-block:: json
+
           {
             "message": "Diary entry created",
             "entryId": "67890"
@@ -73,7 +76,8 @@ Endpoints
 
      - **Failure**
 
-       .. code-block:: json
+        .. code-block:: json
+
           {
             "error": "Content cannot be empty"
           }
@@ -84,6 +88,7 @@ Endpoints
    - **Request Format**
 
      .. code-block:: json
+
         {
           "userId": "12345",
           "stressor": "studies",
@@ -94,6 +99,7 @@ Endpoints
      - **Success**
 
        .. code-block:: json
+
           {
             "message": "Stress recorded"
           }
@@ -101,6 +107,7 @@ Endpoints
      - **Failure**
 
        .. code-block:: json
+
           {
             "error": "Invalid stressor type"
           }
@@ -112,25 +119,25 @@ Usage Examples
 
 1. **User Registration Example**
 
-      curl -X POST https://yourapi.com/api/register \
-      -H "Content-Type: application/json" \
-      -d '{"email": "user@example.com", "password": "your_password"}'
+    - curl -X POST https://yourapi.com/api/register \
+    - -H "Content-Type: application/json" \
+    - -d '{"email": "user@example.com", "password": "your_password"}'
 
 2. **Diary Entry Creation Example**
-      curl -X POST https://yourapi.com/api/diary \
-      -H "Content-Type: application/json" \
-      -d '{"userId": "12345", "content": "Today I felt happy and spent time with friends.", "mood": "happy", "photos": ["photo_url_1", "photo_url_2"]}'
+    - curl -X POST https://yourapi.com/api/diary \
+    - -H "Content-Type: application/json" \
+    - -d '{"userId": "12345", "content": "Today I felt happy and spent time with friends.", "mood": "happy", "photos": ["photo_url_1", "photo_url_2"]}'
 
 3. **Stress Logging Example**
-      curl -X POST https://yourapi.com/api/stress \
-      -H "Content-Type: application/json" \
-      -d '{"userId": "12345", "stressor": "studies", "details": "I am feeling overwhelmed with my assignments."}'
+    - curl -X POST https://yourapi.com/api/stress \
+    - -H "Content-Type: application/json" \
+    - -d '{"userId": "12345", "stressor": "studies", "details": "I am feeling overwhelmed with my assignments."}'
 
 ---
 
 기본 정보
 -----------------
-- Mind Logging API는 **RESTful 아키텍처**를 따르며, **JSON 형식**의 데이터를 사용합니다.
+- Mind Logging API는 **RESTful 아키텍처** 를 따르며, **JSON 형식** 의 데이터를 사용합니다.
 - 모든 요청은 HTTPS를 통해 안전하게 전송됩니다.
 
 ---
@@ -155,6 +162,7 @@ Usage Examples
      - **성공**
 
        .. code-block:: json
+
           {
             "message": "Registration successful",
             "userId": "12345"
@@ -163,6 +171,7 @@ Usage Examples
      - **실패**
 
        .. code-block:: json
+
           {
             "error": "Email already exists"
           }
@@ -174,6 +183,7 @@ Usage Examples
    - **요청 형식**
 
      .. code-block:: json
+
         {
           "userId": "12345",
           "content": "Today I felt happy and spent time with friends.",
@@ -186,6 +196,7 @@ Usage Examples
      - **성공**
 
        .. code-block:: json
+
           {
             "message": "Diary entry created",
             "entryId": "67890"
@@ -194,6 +205,7 @@ Usage Examples
      - **실패**
 
        .. code-block:: json
+
           {
             "error": "Content cannot be empty"
           }
@@ -216,6 +228,7 @@ Usage Examples
      - **성공**
 
        .. code-block:: json
+
           {
             "message": "Stress recorded"
           }
@@ -223,6 +236,7 @@ Usage Examples
      - **실패**
 
        .. code-block:: json
+
           {
             "error": "Invalid stressor type"
           }
@@ -234,18 +248,18 @@ Usage Examples
 
 1. **사용자 등록 예제**
 
-    curl -X POST https://yourapi.com/api/register \
-    -H "Content-Type: application/json" \
-    -d '{"email": "user@example.com", "password": "your_password"}'
+  - curl -X POST https://yourapi.com/api/register \
+  - H "Content-Type: application/json" \
+  - d '{"email": "user@example.com", "password": "your_password"}'
 
 2. **일기 작성 예제**
 
-    curl -X POST https://yourapi.com/api/diary \
-    -H "Content-Type: application/json" \
-    -d '{"userId": "12345", "content": "Today I felt happy and spent time with friends.", "mood": "happy", "photos": ["photo_url_1", "photo_url_2"]}'
+  - curl -X POST https://yourapi.com/api/diary \
+  - -H "Content-Type: application/json" \
+  - -d '{"userId": "12345", "content": "Today I felt happy and spent time with friends.", "mood": "happy", "photos": ["photo_url_1", "photo_url_2"]}'
 
 3. **스트레스 기록 예제**
 
-    curl -X POST https://yourapi.com/api/stress \
-    -H "Content-Type: application/json" \
-    -d '{"userId": "12345", "stressor": "studies", "details": "I am feeling overwhelmed with my assignments."}'
+  - curl -X POST https://yourapi.com/api/stress \
+  - -H "Content-Type: application/json" \
+  - -d '{"userId": "12345", "stressor": "studies", "details": "I am feeling overwhelmed with my assignments."}'

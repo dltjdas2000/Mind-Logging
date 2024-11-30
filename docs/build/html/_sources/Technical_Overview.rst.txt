@@ -1,8 +1,12 @@
 .. _Technical_Overview:
 
-Technical Overview
+Technical_Overview
 =================
+
  A summary of the project's architecture, core components, and technologies used.
+
+Technical Overview(en)
+========
 
 **Architecture**
 Mind Logging is built on a client-server architecture, with the user interface provided through a mobile application. The server handles data processing, AI analysis, and user management functions.
@@ -41,6 +45,9 @@ Mind Logging is built on a client-server architecture, with the user interface p
   - Natural Language Processing (NLP): Technologies used for sentiment analysis and text processing.
 
 
+
+Technical Overview(kor)
+========
 
 **아키텍처**
 

@@ -1,8 +1,12 @@
 .. _Technical_Overview:
 
-Technical Overview
+Technical_Overview
 =================
+
  A summary of the project's architecture, core components, and technologies used.
+
+Technical Overview(en)
+========
 
 **Architecture**
 Mind Logging is built on a client-server architecture, with the user interface provided through a mobile application. The server handles data processing, AI analysis, and user management functions.
@@ -28,19 +32,25 @@ Mind Logging is built on a client-server architecture, with the user interface p
 **Technologies Used**
 
 - **Frontend**
+
   - React Native: Framework for mobile application development.
   - Redux: Library for state management.
 
 - **Backend**
+
   - Node.js: JavaScript runtime for server-side development.
   - Express: Web framework for building RESTful APIs.
   - MongoDB: NoSQL database for storing user data.
 
 - **AI and Machine Learning**
+
   - TensorFlow: Open-source library for developing and training AI models.
   - Natural Language Processing (NLP): Technologies used for sentiment analysis and text processing.
 
 
+
+Technical Overview(kor)
+========
 
 **아키텍처**
 
@@ -63,15 +73,18 @@ Mind Logging은 클라이언트-서버 아키텍처를 기반으로 하며, 사�
 
 **사용된 기술**
 
-- **프론트엔드**:
+- **프론트엔드**
+
   - React Native: 모바일 애플리케이션 개발을 위한 프레임워크.
   - Redux: 상태 관리를 위한 라이브러리.
 
-- **백엔드**:
+- **백엔드**
+
   - Node.js: 서버 사이드 개발을 위한 JavaScript 런타임.
   - Express: RESTful API 구축을 위한 웹 프레임워크.
   - MongoDB: 사용자 데이터 저장을 위한 NoSQL 데이터베이스.
 
-- **AI 및 머신 러닝**:
+- **AI 및 머신 러닝**
+
   - TensorFlow: AI 모델 개발 및 훈련을 위한 오픈 소스 라이브러리.
   - Natural Language Processing (NLP): 감정 분석 및 텍스트 처리에 사용되는 기술.
