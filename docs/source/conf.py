@@ -25,3 +25,8 @@ exclude_patterns = []
 
 html_theme = 'cloud'
 html_static_path = ['_static']
+
+# conf.py에 폰트 설정 추가
+html_theme_options = {
+    'font_family': "'Noto Sans KR', sans-serif"
+}
