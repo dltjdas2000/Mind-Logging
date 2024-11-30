@@ -10,7 +10,7 @@ Welcome to Mind-Logging's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-.. figure:: ../../mind_logging_no_grid-removebg-preview.png
+.. figure:: _static/mind_logging_no_grid-removebg-preview.png
    :alt: Mind Logging
    :width: 300px
    :align: center
