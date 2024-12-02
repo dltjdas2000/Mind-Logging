@@ -41,12 +41,14 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Install Dependencies
         run: |
+          cd website
           bundle install          
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         run: |
+          cd website
           bundle exec jekyll build --destination ../_site
         env:
           JEKYLL_ENV: production
