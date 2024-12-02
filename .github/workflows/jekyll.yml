@@ -41,7 +41,6 @@ jobs:
           cache-version: 0 # Increment this number if you need to re-download cached gems
       - name: Install Dependencies
         run: |
-          cd ai-diary-site
           bundle install          
       - name: Setup Pages
         id: pages
@@ -49,7 +48,6 @@ jobs:
       - name: Build with Jekyll
         # Outputs to the './_site' directory by default
         run: |
-          cd ai-diary-site
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
@@ -57,7 +55,7 @@ jobs:
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ai-diary-site/_site
+          path: _site
           
   # Deployment job
   deploy:
