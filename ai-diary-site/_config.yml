@@ -24,7 +24,7 @@ description: "Mind Logging uses AI to help keep a diary and manage stress."
 github_username: "dltjdas2000"
 baseurl: "/Mind-Logging"
 url: "https://dltjdas2000.github.io"
-
+source: "ai-diary-site"
 
 
 # Build settings
