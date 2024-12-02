@@ -228,3 +228,8 @@ pyrightconfig.json
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python
+
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
