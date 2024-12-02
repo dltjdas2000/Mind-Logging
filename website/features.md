@@ -1,6 +1,7 @@
 ---
 layout: default
 title: features
+permalink: /features/
 ---
 
 ## 🙋 Mind Logging Features

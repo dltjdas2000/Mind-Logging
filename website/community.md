@@ -1,6 +1,7 @@
 ---
 layout: default
 title: community
+permalink: /community/
 ---
 # Join the Community
 Join the AI Diary community to help create a better experience! 😊
