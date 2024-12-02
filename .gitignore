@@ -229,6 +229,8 @@ pyrightconfig.json
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,visualstudiocode,python
 
+_site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+vendor
