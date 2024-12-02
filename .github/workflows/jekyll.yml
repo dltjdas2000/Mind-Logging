@@ -47,7 +47,6 @@ jobs:
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
         run: |
-          cd Mind-Logging
           bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
