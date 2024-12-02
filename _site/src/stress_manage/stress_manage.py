@@ -1,1 +1,0 @@
-# classify causes of stress and throw away
