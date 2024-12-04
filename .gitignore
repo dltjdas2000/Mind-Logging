@@ -166,6 +166,7 @@ venv.bak/
 mindenv/
 semienv/
 mindlogHJ/
+chatbotenv
 
 # Spyder project settings
 .spyderproject
