@@ -15,3 +15,7 @@ permalink: /features/
 - The AI analyzes and classifies the stressors entered by the user into various types such as relationships, studies, and work, making it easy for the user to identify the main stressors.
 - **Action functions that "relieve" recorded stress** provide emotional relief, and visual classification allows you to increase your ability to manage stress systematically.
 - It supports emotional recovery and helps relieve psychological stress through the process of facing and relieving stress.
+
+<br><br>
+
+For more details, please refer to the [documentation](https://mind-logging.readthedocs.io/en/latest/index.html).
