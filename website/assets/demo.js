@@ -60,7 +60,7 @@ async function sendMessage() {
 
     try {
         // 서버로 날짜와 함께 사용자 메시지 전송
-        const response = await fetch("http://localhost:5001/chat", {
+        const response = await fetch("https://flask-o69m.onrender.com/chat", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
