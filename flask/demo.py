@@ -80,7 +80,7 @@ class MentalHealthDiary:
             with open(log_file, 'w', encoding='utf-8') as f:
                 json.dump(self.conversation_log, f, ensure_ascii=False, indent=4)
             self.conversation_log = []  # Clear the log after saving
-            return f"Conversation saved to {log_file}"
+            return f"Conversation saved"
         except Exception as e:
             return f"Error saving conversation: {e}"
 
