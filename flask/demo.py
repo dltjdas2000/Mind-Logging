@@ -27,46 +27,95 @@ class MentalHealthDiary:
         self.logs_dir = os.path.join(os.path.dirname(__file__), 'conversation_logs')
         os.makedirs(self.logs_dir, exist_ok=True)
         self.model_finetuned = False  # Track if Fine-Tuned model is available
+        self.initial_question_asked = False  # Track if the initial question has been processed
+        self.used_responses = set()  # Track used responses to avoid repetition
 
     def analyze_sentiment(self, user_input):
         """Analyze the sentiment of the user input."""
         result = sentiment_analyzer(user_input)
         return result[0]["label"]  # "POSITIVE" or "NEGATIVE"
 
-    def generate_response(self, sentiment, user_input):
-        """Generate a response combining predefined responses and model-generated responses."""
-        # Handle specific questions directly
-        if user_input.lower() in ["who are you?", "who r u?"]:
-            return "I'm Penko, your friendly mental health companion."
+    def check_loneliness(self, user_input):
+        """Check if the user input indicates loneliness."""
+        loneliness_keywords = ["alone", "lonely", "loneliness"]
+        return any(keyword in user_input.lower() for keyword in loneliness_keywords)
 
-        # Short or vague responses
-        if len(user_input.split()) < 3:
-            if sentiment == "NEGATIVE":
-                return "I hear you. Sometimes it's hard to put feelings into words. I'm here for you."
-            return "That's okay. Whenever you're ready to share more, I'm here."
+    def generate_response(self, sentiment, user_input, is_initial_question):
+        """Generate a response that considers the context of previous conversation and avoids repetition."""
+        # Normalize user input for processing
+        user_input_lower = user_input.lower().strip()
 
-        # Use Blenderbot for dynamic response generation
-        inputs = tokenizer(user_input, return_tensors="pt")
+        # Handle specific predefined questions
+        predefined_responses = {
+            "who are you?": "I'm Penko, your friendly mental health companion.",
+            "who r u?": "I'm Penko, here to support you whenever you need."
+        }
+        if user_input_lower in predefined_responses:
+            return predefined_responses[user_input_lower]
+
+        # Handle loneliness-related inputs
+        if self.check_loneliness(user_input):
+            loneliness_responses = [
+                "You're not alone. I'm here for you whenever you need someone to talk to.",
+                "I understand it can feel tough, but remember, Penko is always here to support you.",
+                "Feeling lonely is hard, but you're not by yourself—I'm here to help.",
+                "Whenever you feel this way, just know I'm right here for you."
+            ]
+            unused_responses = [resp for resp in loneliness_responses if resp not in self.used_responses]
+
+            if unused_responses:
+                response = random.choice(unused_responses)
+            else:
+                response = random.choice(loneliness_responses)  # Fallback to reuse if all responses are used
+
+            self.used_responses.add(response)
+            return response
+
+        # Combine conversation history for context
+        conversation_history = "\n".join([entry["user_input"] for entry in self.conversation_log])
+        user_input_with_context = f"{conversation_history}\n{user_input}"
+
+        # Handle initial question based on sentiment
+        if is_initial_question:
+            # Sentiment-based empathy for initial question
+            empathy_responses = {
+                "POSITIVE": [
+                    "That's wonderful to hear! What else made your day great?",
+                    "I'm so happy for you! Could you share more?",
+                    "That sounds amazing. Tell me more!"
+                ],
+                "NEGATIVE": [
+                    "That sounds difficult. How are you managing?",
+                    "I'm here for you. Would you like to share more?",
+                    "It seems challenging. Let me know if you'd like to talk about it."
+                ],
+                "NEUTRAL": [
+                    "I'm here to listen. Feel free to share more.",
+                    "That sounds interesting. Tell me more!",
+                    "Got it. Let me know if there's more you'd like to discuss."
+                ]
+            }
+            possible_responses = empathy_responses.get(sentiment, ["I'm here to support you."])
+            unused_responses = [resp for resp in possible_responses if resp not in self.used_responses]
+
+            if unused_responses:
+                response = random.choice(unused_responses)
+            else:
+                response = random.choice(possible_responses)  # Fallback to reuse if all responses are used
+
+            self.used_responses.add(response)
+            return response
+
+        # Generate dynamic responses using Blenderbot with conversation context
+        inputs = tokenizer(user_input_with_context, return_tensors="pt")
         reply_ids = model.generate(**inputs)
         model_response = tokenizer.decode(reply_ids[0], skip_special_tokens=True)
 
-        # Sentiment-based empathy
-        if sentiment == "POSITIVE":
-            empathic_response = random.choice([
-                "That's wonderful to hear! What else made your day great?",
-                "I'm so happy for you! Could you share more?",
-            ])
-        elif sentiment == "NEGATIVE":
-            empathic_response = random.choice([
-                "I'm sorry to hear that. Want to talk about it?",
-                "It sounds tough. I'm here to listen anytime you need.",
-            ])
-        else:
-            empathic_response = "I'm here to listen. Feel free to share more."
+        # Avoid repeating generated responses
+        if model_response in self.used_responses:
+            model_response += " Would you like to explore this further?"
 
-        # Blend empathy and model response for more natural flow
-        if sentiment in ["POSITIVE", "NEGATIVE"]:
-            return f"{empathic_response} {model_response}"
+        self.used_responses.add(model_response)
         return model_response
 
     def save_conversation(self):
@@ -101,12 +150,16 @@ class MentalHealthDiary:
             print(f"Error during retraining: {e}")
 
     def process_user_input(self, user_input):
-        sentiment = self.analyze_sentiment(user_input)
-
         if user_input.lower() == "exit":
             return self.save_conversation()
 
-        ai_response = self.generate_response(sentiment, user_input)
+        if not self.initial_question_asked:
+            sentiment = self.analyze_sentiment(user_input)
+            ai_response = self.generate_response(sentiment, user_input, is_initial_question=True)
+            self.initial_question_asked = True
+        else:
+            ai_response = self.generate_response(None, user_input, is_initial_question=False)
+
         self.conversation_log.append({"timestamp": datetime.now().isoformat(),
                                        "user_input": user_input,
                                        "ai_response": ai_response})
@@ -134,6 +187,8 @@ def chat():
 
     if user_input.lower() == "reset":
         mental_health_diary.user_info = {}
+        mental_health_diary.initial_question_asked = False
+        mental_health_diary.used_responses.clear()
         return jsonify({"reply": "Your profile has been reset. What's your name and age?"})
 
     if not mental_health_diary.user_info:
