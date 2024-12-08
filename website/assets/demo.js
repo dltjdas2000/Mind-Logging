@@ -60,7 +60,7 @@ async function sendMessage() {
 
     try {
         // 서버로 날짜와 함께 사용자 메시지 전송
-        const response = await fetch("https://bcb9-125-132-214-164.ngrok-free.app/chat", {
+        const response = await fetch("https://32a4-115-91-214-6.ngrok-free.app", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ 
