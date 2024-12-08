@@ -67,7 +67,5 @@ title: Home
   </a>
 </div><br>
 
-
-[![Documentation](assets/images/ReadTheDocs-1324888757184190574_32px.ico)](https://mind-logging.readthedocs.io/en/latest/index.html)
 [![GitHub](assets/images/32px-Font_Awesome_5_brands_github.svg.png)](https://github.com/dltjdas2000/Mind-Logging)
-[![Kakaotalk](assets/images/kakaotalk.png)](https://open.kakao.com/o/gKewvO2g)
+[![Documentation](assets/images/ReadTheDocs-1324888757184190574_32px.ico)](https://mind-logging.readthedocs.io/en/latest/index.html)

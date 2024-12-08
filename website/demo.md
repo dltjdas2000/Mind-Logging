@@ -4,19 +4,26 @@ title: Demo Chatbot
 permalink: /demo/
 ---
 
-# Mind-Logging
+## Welcome to the AI Chatbot Demo Page
 
-We can help you keep a diary and manage stress.
+<div class="center-image">
+  <img src="../assets/images/pengco.png" alt="pengco" />
+</div>
+<style>
+  .center-image {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
+</style>
 
 <!-- 캘린더 배치 -->
 <div id="calendar" style="margin: 20px 0; text-align: center;">
-    <h3>Select a Date</h3>
+    <p>You can select a date for journaling.</p>
     <input type="date" id="selectedDate" style="padding: 5px; border: 1px solid #ccc; border-radius: 4px;">
 </div>
 
-# Welcome to the AI Chatbot Page
-
-This is a simple chatbot interface powered by Flask and Hugging Face.
+This is a demo version of a chat for journaling.
 
 <!-- 챗봇 인터페이스 -->
 <div id="chatbot">
